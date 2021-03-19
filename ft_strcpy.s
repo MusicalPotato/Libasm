@@ -9,7 +9,7 @@ loop:
 	cmp cl, 0
 	jne plus
 	ret
-	plus:
+plus:
 	inc rdi
 	inc rsi
 	jmp loop

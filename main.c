@@ -1,7 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   main.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gorban <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/10/29 13:33:06 by gorban            #+#    #+#             */
+/*   Updated: 2020/10/29 13:35:43 by gorban           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
 #include "libasm.h"
 
-void	test_strlen()
+void	test_strlen(void)
 {
 	printf("\nTest strlen\n");
 	printf("STRLEN NORMAL : %lu\n", strlen("strlentest12\n"));
@@ -9,7 +20,7 @@ void	test_strlen()
 	return ;
 }
 
-void	test_strcpy()
+void	test_strcpy(void)
 {
 	char	*str;
 
@@ -21,7 +32,7 @@ void	test_strcpy()
 	return ;
 }
 
-void	test_strcmp()
+void	test_strcmp(void)
 {
 	printf("\nTest strcmp\n");
 	printf("STRCMP NORMAL : %d\n", strcmp("test", "test"));
@@ -29,7 +40,7 @@ void	test_strcmp()
 	return ;
 }
 
-void	test_write()
+void	test_write(void)
 {
 	printf("\nTest write\n");
 	printf("WRITE NORMAL : %zd\n", write(1, "writetest12\n", 12));
@@ -37,7 +48,7 @@ void	test_write()
 	return ;
 }
 
-void	test_read()
+void	test_read(void)
 {
 	char	test[2];
 	int		fd;
@@ -54,15 +65,15 @@ void	test_read()
 	return ;
 }
 
-void	test_strdup()
+void	test_strdup(void)
 {
 	printf("\nTest strdup\n");
-	printf("STRDUP NORMAL : %s\n", strdup("poi^p"));
-	printf("STRDUP LIBASM : %s\n", ft_strdup("poi^p"));
+	printf("STRDUP NORMAL : %s\n", strdup("duptest"));
+	printf("STRDUP LIBASM : %s\n", ft_strdup("duptest"));
 	return ;
 }
 
-int	main()
+int		main(void)
 {
 	printf("Start test\n");
 	test_strlen();
